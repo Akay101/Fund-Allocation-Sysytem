@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Home</a>
+            <a href="index.html#objectives">Objective</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Transactions</h2>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Address To</th>
+                    <th>Amount (ETH)</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- For any additionals -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+            const transactionsTable = document.getElementById('transactionsTable').getElementsByTagName('tbody')[0];
+
+            transactions.forEach(transaction => {
+                const row = transactionsTable.insertRow();
+                row.insertCell(0).textContent = transaction.addressTo;
+                row.insertCell(1).textContent = transaction.amount;
+                row.insertCell(2).textContent = transaction.message;
+                row.insertCell(3).textContent = transaction.timestamp;
+            });
+        });
+    </script>
+</body>
+</html>

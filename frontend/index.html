@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Fund Allocation and Tracking Blockchain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Home</a>
+            <a href="#objectives">Objective</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="history.html">History</a>
+        </div>
+        <button id="connectWalletBtn">Connect Wallet</button>
+    </nav>
+
+    <div class="container">
+        <h1>Government Fund Allocation and Tracking Blockchain</h1>
+        <p>Blockchain enables transparent and secure management of funds by leveraging blockchain technology for efficient and auditable transactions.</p>
+        
+        <div id="walletInfo" class="card">
+            <div id="wallet-address">Ethereum</div>
+        </div>
+
+        <form id="transactionForm">
+            <input type="text" id="addressTo" placeholder="Address To" required>
+            <input type="number" id="amount" placeholder="Amount (ETH)" required>
+            <textarea id="message" placeholder="Enter Message" required></textarea>
+            <button type="submit">Send Now</button>
+        </form>
+    </div>
+
+    <section id="objectives" class="objectives-section">
+        <h2>Key Objectives</h2>
+        <div class="objective">
+            <h3>Transparency</h3>
+            <p>Blockchain enhances transparency in government fund allocation and tracking by providing real-time visibility of transactions on a distributed ledger, enabling verification of fund flows.</p>
+        </div>
+        <div class="objective">
+            <h3>Efficiency</h3>
+            <p>Efficiency in government fund allocation can be improved by leveraging smart contracts, which automate processes, eliminate intermediaries, and ensure accurate and timely fund disbursements.</p>
+        </div>
+        <div class="objective">
+            <h3>Security</h3>
+            <p>Blockchain's security measures, such as cryptographic encryption and decentralized consensus, protect against fraud and unauthorized access, ensuring the integrity and confidentiality of government fund transactions.</p>
+        </div>
+        <div class="objective">
+            <h3>Accountability</h3>
+            <p>The immutability of blockchain records and the ability to track and audit fund transactions promote accountability, allowing for the permanent and transparent recording of allocation and utilization of funds by government entities.</p>
+        </div>
+    </section>
+
+    <script src="transactions.js"></script>
+</body>
+</html>
